@@ -1,6 +1,8 @@
 *{
-   border: 2px solid red;
+   /* border: 2px solid red; */
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 body{
@@ -12,22 +14,21 @@ body{
 }
 
 .cont{
-   /* width: 100vw; */
    display: flex;
-   /* height: 100vh; */
    justify-content: center;
    flex-direction: row-reverse;
+   height: 100vh;
 }
 
 .hero-cont{
-   height: 100%;
+   height: inherit;
    width: 50%;
    display: flex;
 }
 
 .hero-desktop{
-   /* width: 100%; */
-   /* min-width: 37.5rem; */
+   width: 100%;
+   height: auto;
 }
 
 .hero-mobile{
@@ -40,12 +41,14 @@ body{
 }
 
 .content-wrapper{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
    height: 100%;
    background-image: url(./images/bg-pattern-desktop.svg);
    background-size: cover;
    background-color: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-   padding: 5rem 2rem 0 10rem;
-   /* width: 50%; */
+   padding: 2rem 2rem 0 10rem;
 }
 
 .desktop-logo{
@@ -61,7 +64,7 @@ body{
 }
 
 h1{
-   font-size: 3rem;
+   font-size: 2.5rem;
    line-height: 1.5;
    letter-spacing: 1rem;
    font-weight: 600;
@@ -120,7 +123,7 @@ form{
 }
 
 .danger-text{
-   font-size: 1rem;
+   font-size: .9rem;
    font-weight: 400;
    color: hsl(0, 93%, 68%);
    padding: 0.2rem 2rem;
@@ -151,8 +154,9 @@ input::placeholder{
    color:  hsl(0, 36%, 70%);
 }
 
-@media(max-width:1024px){
+@media(min-width:1024px){
    .hero-desktop{
-      min-width: 30rem;
+      width: 100%;
+      height: auto;
    }
 }
